@@ -1,0 +1,32 @@
+# Skill-required
+docs/
+.opencode/
+.env
+.venv/
+.cache/
+*.db
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+.eggs/
+dist/
+build/
+.pytest_cache/
+.coverage
+htmlcov/
+.mypy_cache/
+.ruff_cache/
+.tox/
+
+# OS / editor
+.DS_Store
+.idea/
+.vscode/
+*.log
+
+# AIs
+.cursor/
+.opencode/

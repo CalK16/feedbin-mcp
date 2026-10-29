@@ -1,0 +1,37 @@
+[project]
+name = "feedbin-mcp"
+version = "0.1.0"
+description = "MCP server for the Feedbin REST API"
+readme = "README.md"
+authors = [
+    { name = "Calvin K", email = "70356237+CalK16@users.noreply.github.com" }
+]
+requires-python = ">=3.12"
+dependencies = [
+    "httpx>=0.28.1",
+    "mcp>=2.3.0",
+]
+
+[project.scripts]
+feedbin-mcp = "feedbin_mcp.server:main"
+
+[build-system]
+requires = ["uv_build>=0.12.23,<0.13.0"]
+build-backend = "uv_build"
+
+[dependency-groups]
+dev = [
+    "pytest>=9.1.1",
+    "pytest-cov>=7.1.0",
+]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+
+[tool.coverage.run]
+source = ["feedbin_mcp"]
+omit = ["src/feedbin_mcp/__main__.py"]
+
+[tool.coverage.report]
+fail_under = 90
+show_missing = true
